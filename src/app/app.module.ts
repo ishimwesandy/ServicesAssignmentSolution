@@ -1,3 +1,4 @@
+import { CounterServiceService } from './counterService.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -6,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { ActiveUsersComponent } from './active-users/active-users.component';
 import { InactiveUsersComponent } from './inactive-users/inactive-users.component';
+
 
 @NgModule({
   declarations: [
@@ -17,7 +19,7 @@ import { InactiveUsersComponent } from './inactive-users/inactive-users.componen
     BrowserModule,
     FormsModule,
   ],
-  providers: [],
+  providers: [CounterServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
